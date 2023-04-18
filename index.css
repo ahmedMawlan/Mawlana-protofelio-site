@@ -1,0 +1,897 @@
+:root {
+    --mainColor: #ff0000;
+    --secondColor: #fc70fc;
+    --thirdColor: #fff;
+    --bgColor1: #244b52;
+    --bgColor2: #2a434b;
+    --padding: 8%;
+}
+
+span {
+    color: var(--mainColor);
+}
+
+.btn {
+    background-color: var(--mainColor);
+    color: var(--thirdColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: .4s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--mainColor);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: var(--thirdColor);
+}
+
+/* class home codes */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor1);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+
+/* start navbar codes */
+nav {
+    width: 100%;
+    padding: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    height: 50px;
+    background-color: var(--bgColor1);
+    border-bottom: 1px solid var(--bgColor2);
+    z-index: 100;
+    opacity: .9;
+
+}
+
+nav ul.is-active{
+    display: block
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+}
+
+nav ul li a {
+    color: var(--thirdColor);
+    text-decoration: none;
+    text-decoration-color: var(--mainColor);
+    text-transform: capitalize;
+    transition: 1s;
+}
+
+nav ul li a:hover {
+    color: var(--secondColor);
+    text-decoration: underline;
+}
+
+/****** 
+        button hamborger
+******/
+
+#menue {
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menue span {
+    display: none;
+    width: 33px;
+    height: 4px;
+    background-color: var(--thirdColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: .4s;
+    margin-bottom: 5px;
+}
+
+#menue span:hover {
+    
+    color:var(--secondColor)
+}
+/* end navbar codes */
+
+.content{
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .container-texts {
+    bottom: 70px;
+}
+
+.container-texts h1, .container-description h1 {
+    font-size: 2.65rem;
+    margin: 1.7rem 0;
+}
+
+.container-texts h3, .container-description h3 {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.content h4 {
+    font-size: 1.25rem;
+    letter-spacing: .12rem;
+}
+
+.social {
+    margin-top: 3.5rem;
+}
+
+.social img {
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: .4s
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+/* my image codes */
+.home .container-images {
+    width: 45%;
+    height: 80%;
+    position: relative;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.home .container-images img {
+    position: absolute;
+    bottom: 0;
+    height: 100%; 
+    transition: 1s;
+}
+
+.flex:hover .shape {
+    transform: scale(1.01);
+}
+
+.flex:hover .myphoto {
+    transform: scale(.9);
+}
+
+
+/* class about codes */
+.about {
+    background-color: var(--bgColor2);
+    padding: 2rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .container-images {
+    width: 35%;
+    
+}
+
+.about .container-images img {
+    width: 90%;   
+}
+
+.about .container-description {
+    width: 40%;
+    line-height: 1.8rem;
+}
+
+.container-description h4 {
+    margin-bottom: 1.37rem;
+}
+
+/* class services codes */
+.services {
+    background-color: var(--bgColor1);
+    padding: 2rem var(--padding);
+}
+
+.services h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.services .symbol-html {
+    color: var(--mainColor);
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.services h5 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.types {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.engineer-web {
+    background-color: var(--bgColor2);
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 1.3rem 2rem; 
+    margin: 1.5rem;
+    line-height: 1.8rem;  
+    font-size: 1.3rem; 
+    box-shadow: 0 5px 25px rgba(30, 145, 153, 0.829);
+    transition: .8s;
+}
+
+.engineer-web:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 25px rgba(2, 255, 179, 0.938);
+}
+
+
+/* class skills codes */
+.skills {
+    background-color: var(--bgColor2);
+    padding: 2rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .container-images {
+    width: 35%;  
+}
+
+.skills .container-images img {
+    width: 90%;   
+}
+
+.skills .container-texts {
+    width: 50%;
+}
+
+.content-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: var(--thirdColor);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;;
+    margin: 0 3rem 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill img {
+    width: 60%;
+    transition: .4s;
+}
+
+.skill img:hover {
+    transform: scale(.8);
+    
+}
+
+
+/* class contact-me codes */
+.contact-me {
+    background-color: var(--bgColor1);
+    padding: 2rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-me .container-images {
+    width: 35%;  
+}
+
+.contact-me .container-images img {
+    width: 90%;   
+}
+
+.contact-me .container-texts {
+    width: 70%;
+}
+
+.content-contact {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.phone-mail {
+    background-color:var(--bgColor2);
+    width: 300px;
+    height: 230px;
+    border-radius: 20px;
+    padding: 1.3rem 2rem; 
+    margin: 1.5rem;
+    line-height: 1.8rem;  
+    font-size: 1.3rem; 
+    box-shadow: 0 5px 25px rgba(30, 145, 153, 0.829);
+    transition: .8s;
+}
+
+.phone-mail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 25px rgba(2, 255, 179, 0.938);
+}
+
+.content-contact .message {
+    color:#38ffe46e;
+    font-size: 50px;
+    margin-bottom: 30px;
+    transition: .4s;
+}
+
+.content-contact .message:hover {
+    transform: scale(.9);
+}
+
+.contact-me h5 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+
+/* class end codes */
+.end {
+    background-color: var(--bgColor2);
+    padding: 1.5rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.end p {
+    margin-left: 5px; 
+    font-size: 20px
+}
+
+.end .num-whatsapp {
+    display: flex;
+    align-items: center;
+} 
+
+.end img {
+    transition: .4s;
+}
+.end img:hover {
+    transform: scale(.9);
+}
+
+
+/* 
+****************
+*********** media quirries Phones
+*****************
+*/
+
+@media screen and (max-width: 575px) {
+    :root {
+        --padding: 1.5rem
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+/* class home codes */
+
+    .home .container-images {
+        display: none;
+    }
+
+    #menue {
+        display: block;
+    }
+
+    #menue span{
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; 
+        height: 100vh;
+        background: var(--bgColor2);     
+    }
+    
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .content {
+        justify-content: center;
+    }
+
+    .container-texts {
+        text-align: center;
+    }
+
+    #blog { 
+        margin: 43%;
+    } 
+
+    .container-texts h1  {
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .container-texts h3 {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        line-height: 25px;
+    }
+
+    .social {
+        margin-top: 1.5rem;
+    }
+
+    .social img {
+        margin-right: 1.5rem;
+        margin-top: 15px;
+    }
+
+/* class About codes */
+    
+    .about .container-images {
+        display: none;
+    }
+
+    .about .container-description{
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-description h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .container-description h4 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+    }
+
+    .container-description p {
+        font-size: 1.1rem
+    }
+
+/* class Services codes */
+    
+    .services h1 {
+        font-size: 30px;
+    }
+
+    .types {
+        flex-wrap: wrap;
+    }
+
+    .engineer-web {
+        margin-bottom: 30px;
+    }
+
+/* class Skills codes */
+
+    .skills .container-images {
+        display: none;
+    }
+
+    .skills .container-texts {
+        width: 100%;
+    }
+
+    .skills .container-texts h1 {
+        text-align: center;
+        font-size: 30px;
+    } 
+
+    .content-skills {
+        justify-content: space-around;
+    }
+
+    .skill {
+        margin: 0 1rem   1.5rem 0;
+    } 
+
+/* class contact-me codes */
+
+    .contact-me .container-images {
+        display: none;
+    }
+
+    .contact-me .container-texts {
+        width: 100%;
+    }
+
+    .container-texts h1 {
+        font-size: 30px;
+    }
+
+    .content-contact {
+        flex-wrap: wrap;
+    }
+
+    .phone-mail{
+        margin-bottom: 30px;
+    }
+
+/* class End codes */
+
+    .end p {
+        margin-left: 5px;
+        font-size: 16px;
+    }  
+}
+
+/* 
+****************
+*********** media quirries Tablets
+*****************
+*/
+
+@media (max-width: 900px) and (min-width: 576px) {
+    :root {
+        --padding: 1.5rem
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+/* class home codes */
+
+    .home .container-images {
+        display: none;
+    }
+
+    #menue {
+        display: block;
+    }
+    
+    #menue span{
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; 
+        height: 100vh;
+        background: var(--bgColor2);     
+    }
+    
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    
+
+    #blog { 
+        margin: 45%;
+    } 
+
+    .content {
+        justify-content: center;
+    }
+
+    .container-texts {
+        text-align: center;
+    }
+
+    .container-texts h1  {
+        font-size: 2.5rem;
+    }
+
+    .container-texts h3 {
+        font-size: 1.3rem;
+        margin-bottom: 5.5rem;
+        line-height: 25px;
+    }
+
+    .social img {
+        margin-right: 1.5rem;
+        margin-top: 15px;
+    }
+
+/* class About codes */
+    
+    .about .container-images {
+        display: none;
+    }
+
+    .about .container-description{
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-description h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .container-description h4 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+    }
+
+    .container-description p {
+        font-size: 1.1rem
+    }
+
+/* class Services codes */
+    
+    .services h1 {
+        font-size: 30px;
+    }
+
+    .types {
+        flex-wrap: wrap;
+    }
+
+    .engineer-web {
+        margin-bottom: 30px;
+    }
+
+/* class Skills codes */
+
+    .skills .container-images {
+        display: none;
+    }
+
+    .skills .container-texts {
+        width: 100%;
+    }
+
+    .skills .container-texts h1 {
+        text-align: center;
+        font-size: 30px;
+    } 
+
+    .content-skills {
+        justify-content: space-around;
+    }
+
+    .skill {
+        margin: 0 1rem   1.5rem 0;
+    } 
+
+/* class contact-me codes */
+
+    .contact-me .container-images {
+        display: none;
+    }
+
+    .contact-me .container-texts {
+        width: 100%;
+    }
+
+    .container-texts h1 {
+        font-size: 30px;
+    }
+
+    .content-contact {
+        flex-wrap: wrap;
+    }
+
+    .phone-mail{
+        margin-bottom: 30px;
+    }
+
+/* class End codes */
+
+    .end p {
+        margin-left: 5px;
+        font-size: 16px;
+    }  
+}
+
+
+/* 
+****************
+*********** media quirries labtop
+*****************
+*/
+
+@media (max-width: 1200px) and (min-width: 901px) {
+    :root {
+        --padding: 1.5rem
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+/* class home codes */
+
+    #menue {
+        display: block;
+    }
+
+    #menue span{
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; 
+        height: 100vh;
+        background: var(--bgColor2);     
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    
+
+    #blog { 
+        margin: 46%;
+    } 
+
+    .content {
+        justify-content: center;
+    }
+
+    .container-texts {
+        text-align: center;
+    }
+
+    .container-texts h1  {
+        font-size: 2.5rem;
+    }
+
+    .container-texts h3 {
+        font-size: 1.3rem;
+        margin-bottom: 5.5rem;
+        line-height: 25px;
+    }
+
+    .social img {
+        margin-right: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .home .container-images {
+        height: 78%;
+    }
+
+/* class About codes */
+
+    .about .container-description{
+        width: 60%;
+        text-align: center;
+    }
+
+    .container-description h1 {
+        text-align: center;
+    }
+
+    .container-description h4 {
+        font-size: 1.4rem;
+        margin: 1.5rem 0;
+    }
+
+    .container-description p {
+        font-size: 1.1rem
+    }
+
+/* class types codes  */
+    .types {
+        flex-wrap: wrap;
+    }
+
+    .engineer-web {
+        margin-bottom: 30px;
+    }
+
+/* class types codes  */
+
+    .skill {
+        margin: 0 2rem 2rem 0;
+    }
+
+/* class contact-me codes */
+
+    .contact-me .container-texts {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 319px) {
+    #blog {
+        margin: 37%
+    }
+}
+
+@media (max-width: 500px) and (min-width: 425px){
+    #blog {
+        margin: 41%;
+    }
+}
+
+@media (max-width: 410px) and (min-width: 375px){
+    #blog {
+        margin: 39%;
+    }
+}
+
+@media (max-width: 350px) and (min-width: 320px){
+    #blog {
+        margin: 37%;
+    }
+}
